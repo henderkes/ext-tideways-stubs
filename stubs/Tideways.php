@@ -73,6 +73,7 @@ namespace Tideways {
 
         /** @since tideways 5.4.36 **/
         public static function markAsWebTransaction(): void {}
+        public static function markAsCliTransaction(): void {}
         
         /** @since tideways 5.5.6 **/
         public static function markPageCacheHit(): void {}
