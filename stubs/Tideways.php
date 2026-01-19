@@ -1,7 +1,10 @@
 <?php
 
 namespace Tideways {
-    class Profiler {
+    /**
+     * @not-serializable
+     */
+    final class Profiler {
         private function __construct() {}
 
         public static function isStarted(): bool {}
@@ -83,7 +86,10 @@ namespace Tideways {
 }
 
 namespace Tideways\Profiler {
-    class Span
+    /**
+     * @not-serializable
+     */
+    final class Span
     {
         private function __construct() {}
 
@@ -100,7 +106,8 @@ namespace Tideways\Profiler {
     }
 
     #[\Attribute(\Attribute::TARGET_METHOD | \Attribute::TARGET_FUNCTION)]
-    class WithSpan
+    final class WithSpan
     {
+        public function __construct() {}
     }
 }
